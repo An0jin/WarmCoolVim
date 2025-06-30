@@ -56,7 +56,7 @@ Oracle Cloud 인스턴스에 SSH로 접속하기 위한 스크립트입니다.
 **사용법:**
 ```bash
 # 접속 전에 host 환경 변수를 설정해야 합니다.
-export host=your_oracle_cloud_instance_ip
+echo"export host=your_oracle_cloud_instance_ip" >> ~/.bashrc
 sh connect.sh
 ```
 
@@ -109,13 +109,14 @@ Postgresql 데이터베이스를 생성하는 스크립트입니다.
 
 **사용법:**
 ```bash
-export password=your_password
+echo "export password=your_password" >> ~/.bashrc
 sh createDB.sh
 ```
 
 
 ## 🛠 사용 기술
 - ![ubuntu](https://img.shields.io/badge/-ubuntu-E55844?style=flat&logo=ubuntu&logoColor=white)
+- ![shell script](https://img.shields.io/badge/-shell%20script-E55844?style=flat&logo=gnubash&logoColor=white)
 - ![vim](https://img.shields.io/badge/-vim-019733?style=flat&logo=vim&logoColor=white)
 - ![docker](https://img.shields.io/badge/-docker-2496ED?style=flat&logo=docker&logoColor=white)
 - ![oracle cloud](https://img.shields.io/badge/-oracle%20cloud-E55844?style=flat&logo=oracle&logoColor=white)
