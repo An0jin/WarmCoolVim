@@ -1,0 +1,7 @@
+services:
+  api:
+    image: an0jin/toneiverse
+    container_name: capstoneAPI
+    ports:
+      - "8000:8000"
+    restart: always
