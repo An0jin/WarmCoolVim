@@ -50,73 +50,17 @@
 
 ## 스크립트 설명
 
-### 1. `connect.sh`
-Oracle Cloud 인스턴스에 SSH로 접속하기 위한 스크립트입니다.
-
+### 1. `docker-compose.yml`
+이미지 업데이트용 docker-compose 파일입니다.
 **사용법:**
 ```bash
-# 접속 전에 host 환경 변수를 설정해야 합니다.
-echo"export host=your_oracle_cloud_instance_ip" >> ~/.bashrc
-sh connect.sh
+docker compose up -d
 ```
 
-### 2. `delete.sh`
-실행 중인 FastAPI 컨테이너를 중지하고 제거하는 스크립트입니다.
-
-**기능:**
-- 실행 중인 `capstoneAPI` 컨테이너 중지
-- 중지된 `capstoneAPI` 컨테이너 제거
-- 로컬에 저장된 `an0jin/2025capstone-fastapi:v1` 이미지 삭제
-
-**사용법:**
-```bash
-sh delete.sh
-```
-
-### 3. `pull.sh`
-Docker 허브에서 FastAPI 애플리케이션 이미지를 내려받고 실행하는 스크립트입니다.
-
-**기능:**
-- `an0jin/2025capstone-fastapi:v1` 이미지 다운로드
-- 다운로드한 이미지를 기반으로 컨테이너 실행
-- 호스트의 8000번 포트를 컨테이너의 8000번 포트로 매핑
-- 로컬의 `./uploads` 디렉토리를 컨테이너의 `/code/uploads`에 마운트
-
-**사용법:**
-```bash
-sh pull.sh
-```
-
-### 4. `update.sh`
-애플리케이션을 최신 버전으로 업데이트하는 스크립트입니다.
-
-**기능:**
-1. `delete.sh`를 실행하여 기존 컨테이너 정리
-2. `pull.sh`를 실행하여 최신 버전의 애플리케이션 다운로드 및 실행
-
-**사용법:**
-```bash
-sh update.sh
-```
-
-
-### 5. `createDB.sh`
-Postgresql 데이터베이스를 생성하는 스크립트입니다.
-
-**기능:**
-1. `postgres:16.9-bullseye` 이미지 다운로드
-2. `capstoneDB` 컨테이너 실행
-
-**사용법:**
-```bash
-echo "export password=your_password" >> ~/.bashrc
-sh createDB.sh
-```
 
 
 ## 🛠 사용 기술
 - ![ubuntu](https://img.shields.io/badge/-ubuntu-E55844?style=flat&logo=ubuntu&logoColor=white)
-- ![shell script](https://img.shields.io/badge/-shell%20script-E55844?style=flat&logo=gnubash&logoColor=white)
 - ![vim](https://img.shields.io/badge/-vim-019733?style=flat&logo=vim&logoColor=white)
 - ![docker](https://img.shields.io/badge/-docker-2496ED?style=flat&logo=docker&logoColor=white)
 - ![oracle cloud](https://img.shields.io/badge/-oracle%20cloud-E55844?style=flat&logo=oracle&logoColor=white)
