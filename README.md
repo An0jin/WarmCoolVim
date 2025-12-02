@@ -42,9 +42,7 @@
 
 ### 6. [WarmCoolVim](https://github.com/An0jin/WarmCoolVim)
 
-- vim으로 작성한 쉘 스크립트
-- 쉘 스크립트를 활용한 도커 조작
-- 쉘 스크립트를 활용한 웹호스팅
+- vim으로 작성한 docker compose
 
 ---
 
