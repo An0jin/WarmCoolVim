@@ -5,3 +5,13 @@ services:
     ports:
       - "8000:8000"
     restart: always
+  db:
+    image: postgres:16
+    container_name: DB
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: $PW
+    ports:
+      - "5432:5432"
+    restart: always
