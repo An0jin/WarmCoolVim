@@ -7,8 +7,6 @@ services:
     restart: always
     networks:
       - Toneiverse
-    expose:
-      - "8000"
   db:
     image: postgres:16
     container_name: DB
